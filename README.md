@@ -2,9 +2,11 @@
 
 **Welcome to my codebase!**
 
-This repository is dedicated to the resources of my UG's 2nd semester journey.
+This repository is dedicated to the resources of my UG 2nd semester journey.
 
-This project's source code is available under the [`src`](./src) directory.
+This project's source code is in the [`src`](./src) directory. The useful
+resources are in the [`res`](./res) directory.
+
 Please feel free to make any changes to my code.
 
 ## Coding Environment
