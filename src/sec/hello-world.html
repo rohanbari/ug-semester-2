@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hello World!</title>
+        <style>
+            body {
+                background-color: bisque;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                font-family: "Times New Roman", Times, serif;
+                cursor: pointer;
+            }
+
+            #outro {
+                position: fixed;
+                left: 0;
+                opacity: 0.4;
+                bottom: 0;
+                height: 48px;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="intro">
+            <h1 onclick="displayGreetings()">
+                Welcome to <abbr title="Undergraduate">ug</abbr>-semester-2!
+            </h1>
+
+            <p>I hope you like it here. This is my personal space.</p>
+        </div>
+
+        <div id="outro">
+            <hr />
+            <footer>&copy; 2024 Rohan Bari. All rights reserved.</footer>
+        </div>
+    </body>
+    <script>
+        console.log("Hello World!");
+
+        function displayGreetings() {
+            window.alert("Peek-a-boo!");
+        }
+    </script>
+    <noscript> This page cannot run with NoScript enabled. </noscript>
+</html>

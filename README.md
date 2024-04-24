@@ -25,6 +25,5 @@ Please refer to the [`LICENSE`](./LICENSE) file.
 
 ## Reach Me
 
-- **Email address.** rohanbari4@gmail.com
+- **Email address.** rohanbari@outlook.com
 - **Twitter.** [@TheRohanBari](https://twitter.com/TheRohanBari)
-
