@@ -15,10 +15,9 @@
  */
 
 /**
- * @file s8.c
+ * @file s9.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief This program takes two input from the user, calculates the sum and the
- * product, then prints it.
+ * @brief
  * @version 0.1
  * @date 25-04-2024
  *
@@ -35,7 +34,7 @@ int main(void)
     int num_1 = 0;
     int num_2 = 0;
 
-    printf("Please provide two integers: ");
+    printf("Enter two numbers (sep. by space): ");
 
     // Validating the input values
     while (scanf("%d %d", &num_1, &num_2) != 2) {
@@ -43,10 +42,13 @@ int main(void)
         clear_stdin();
     }
 
-    int sum = num_1 + num_2;
-    int product = num_1 * num_2;
-
-    printf("Summation: \t%d\nProduct: \t%d\n", sum, product);
+    printf("Status: ");
+    if (num_1 == num_2) {
+        printf("Equal.\n");
+    } else {
+        int greater = (num_1 > num_2) ? num_1 : num_2;
+        printf("%d\n", greater);
+    }
 
     return EXIT_SUCCESS;
 }

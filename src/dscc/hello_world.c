@@ -14,6 +14,17 @@
  limitations under the License.
  */
 
+/**
+ * @file hello_world.c
+ * @author rohanbari <rohanbari@outlook.com>
+ * @brief The all-time beloved program.
+ * @version 0.1
+ * @date 25-04-2024
+ *
+ * Copyright (c) 2024 Rohan Bari
+ *
+ */
+
 #include <stdio.h>
 
 /**

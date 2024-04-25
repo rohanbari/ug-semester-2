@@ -14,15 +14,34 @@
  limitations under the License.
  */
 
-#ifndef __BOOL_C__
-#define __BOOL_C__
+/**
+ * @brief This header file contains the necessary definitions which are common
+ * to all the files.
+ *
+ * DO NOT TOUCH IT.
+ *
+ */
+
+#ifndef __BOOL_H__
+#define __BOOL_H__
 
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
 
-enum boolean {
-    False,
-    True
-};
+typedef enum {
+    false,
+    true
+} boolean;
+
+/**
+ * @brief Flushes the STDIN safely.
+ *
+ */
+void clear_stdin(void)
+{
+    int c = 0;
+    while ((c = getchar()) != '\n' && c != EOF)
+        ;
+}
 
 #endif
