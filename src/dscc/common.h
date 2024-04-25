@@ -14,15 +14,15 @@
  limitations under the License.
  */
 
-#include <stdio.h>
+#ifndef __BOOL_C__
+#define __BOOL_C__
 
-/**
- * @brief The main function.
- *
- * @return Zero if executed successfully.
- */
-int main(void)
-{
-    printf("Hello, world!\n");
-    return 0;
-}
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
+
+enum boolean {
+    False,
+    True
+};
+
+#endif

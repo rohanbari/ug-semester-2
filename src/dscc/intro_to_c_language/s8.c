@@ -16,13 +16,27 @@
 
 #include <stdio.h>
 
-/**
- * @brief The main function.
- *
- * @return Zero if executed successfully.
- */
+#include "../common.h"
+
 int main(void)
 {
-    printf("Hello, world!\n");
-    return 0;
+    int num_1 = 0;
+    int num_2 = 0;
+
+    printf("Please provide two integers: ");
+
+    while (scanf("%d %d", &num_1, &num_2) != 2) {
+        perror("error: Invalid input.\n");
+
+        int c = 0;
+        while ((c = getchar()) != '\n' && c != EOF)
+            ;
+    }
+
+    int sum = num_1 + num_2;
+    int product = num_1 * num_2;
+
+    printf("Summation: %5d\nProduct: %5d\n", sum, product);
+
+    return EXIT_SUCCESS;
 }

@@ -6,6 +6,11 @@
             "command": "/usr/bin/gcc",
             "args": [
                 "-fdiagnostics-color=always",
+                "-O3",
+                "-pedantic",
+                "-Wall",
+                "-Wextra",
+                "-std=c11",
                 "-g",
                 "${file}",
                 "-o",
@@ -14,9 +19,7 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": true
