@@ -15,9 +15,10 @@
  */
 
 /**
- * @file s11.c
+ * @file s12.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief This program displays up to inclusively N even/odd numbers.
+ * @brief This program takes an input from the user, calculates the sum of the
+ * inputted number of natural numbers, then prints it on the screen.
  * @version 0.1
  * @date 25-04-2024
  *
@@ -33,24 +34,15 @@ int main(void)
 {
     int n = 0;
 
-    printf("Enter a number: ");
+    printf("Input the value of N: ");
 
     while (scanf("%d", &n) != 1) {
         perror("error: Invalid input.\n");
         clear_stdin();
     }
 
-    printf("Odd numbers:  ");
-    for (int i = 1; i <= n; i += 2)
-        printf("%4d ", i);
-
-    putc('\n', stdout);
-
-    printf("Even numbers: ");
-    for (int i = 2; i <= n; i += 2)
-        printf("%4d ", i);
-
-    putc('\n', stdout);
+    int sum = n * (n + 1) / 2;
+    printf("Summation up to %d: %d\n", n, sum);
 
     return EXIT_SUCCESS;
 }

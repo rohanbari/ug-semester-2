@@ -15,9 +15,10 @@
  */
 
 /**
- * @file s11.c
+ * @file s13.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief This program displays up to inclusively N even/odd numbers.
+ * @brief This program takes an input from the user, calculates the integral
+ * factors, then displays it on the screen.
  * @version 0.1
  * @date 25-04-2024
  *
@@ -29,6 +30,32 @@
 
 #include "../common.h"
 
+int abs(const int n)
+{
+    return ((n < 0) ? -1 : 1) * n;
+}
+
+/**
+ * @brief Prints the factors on the screen.
+ *
+ * @param n Whose factors to be calculated
+ */
+void generate_factors(const int n)
+{
+    // If the number is a negative integer, then the modulus operator cannot be
+    // incorporated unless the negative sign is handled manually.
+    if (n < 0) {
+        printf("-1 ");
+    }
+
+    for (int i = 1; i <= abs(n); i++) {
+        if (n % i == 0) {
+            printf("%d ", i);
+        }
+    }
+    putc('\n', stdout);
+}
+
 int main(void)
 {
     int n = 0;
@@ -36,21 +63,11 @@ int main(void)
     printf("Enter a number: ");
 
     while (scanf("%d", &n) != 1) {
-        perror("error: Invalid input.\n");
+        printf("Invalid input.\n");
         clear_stdin();
     }
 
-    printf("Odd numbers:  ");
-    for (int i = 1; i <= n; i += 2)
-        printf("%4d ", i);
-
-    putc('\n', stdout);
-
-    printf("Even numbers: ");
-    for (int i = 2; i <= n; i += 2)
-        printf("%4d ", i);
-
-    putc('\n', stdout);
+    generate_factors(n);
 
     return EXIT_SUCCESS;
 }
