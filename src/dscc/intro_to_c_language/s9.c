@@ -17,7 +17,8 @@
 /**
  * @file s9.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief
+ * @brief This program takes two input from the user, compares, and prints the
+ * greatest one. If equal, then prints 'Equal.'
  * @version 0.1
  * @date 25-04-2024
  *
