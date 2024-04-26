@@ -27,6 +27,8 @@
 
 #include <stdio.h>
 
+#include "common.h"
+
 /**
  * @brief The main function.
  *
@@ -35,5 +37,5 @@
 int main(void)
 {
     printf("Hello, world!\n");
-    return 0;
+    return EXIT_SUCCESS;
 }
