@@ -36,6 +36,12 @@ typedef enum {
     MULTIPLICATION,
 } choice;
 
+/**
+ * @brief The division process with explaining behavior.
+ *
+ * @param a The first value
+ * @param b The second value
+ */
 void division(int a, int b)
 {
     int quotient = 0;
