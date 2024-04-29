@@ -65,6 +65,11 @@ int main(void)
 
     int* array = (void*)malloc((sizeof(int) * size));
 
+    if (array == NULL) {
+        perror("error: Memory allocation failed.\n");
+        return EXIT_FAILURE;
+    }
+
     for (int i = 0; i < size; i++) {
         printf("Input the %dth value: ", i + 1);
 
@@ -78,6 +83,9 @@ int main(void)
     }
 
     printf("The average of these is %.2f.\n", calculate_average(array, size));
+
+    // A general tip: Always free the memory.
+    free(array);
 
     return EXIT_SUCCESS;
 }
