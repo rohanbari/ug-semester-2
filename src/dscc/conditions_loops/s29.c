@@ -54,7 +54,7 @@ enum triangle identify_triangle(const struct side s)
     if ((s.a + s.b) < s.c) {
         return NOT_A_TRIANGLE;
     }
-    
+
     if (s.a == s.b && s.b == s.c) {
         return EQUILATERAL;
     } else if (s.a == s.b && s.b != s.c) {
@@ -68,7 +68,7 @@ enum triangle identify_triangle(const struct side s)
 
 int main(void)
 {
-    struct side s;
+    struct side s = { 0.0, 0.0, 0.0 };
 
     printf("Input the three sides (sep. by space): ");
 

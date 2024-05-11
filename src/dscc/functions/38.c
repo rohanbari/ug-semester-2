@@ -15,64 +15,53 @@
  */
 
 /**
- * @file s25.c
+ * @file 38.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief This program takes an input from the user, sums up its digits until
- * there is only one decimal place left, then displays it on the screen.
+ * @brief This program takes two input from the user: a base and a power, then
+ * it evaluates a base-raised-to-the-power operation in O(1) time complexity,
+ * and shows it to the user.
+ *
  * @version 0.1
- * @date 28-04-2024
+ * @date 11-05-2024
  *
  * Copyright (c) 2024 Rohan Bari
  *
  */
 
+#include <math.h>
 #include <stdio.h>
 
 #include "../common.h"
 
-static int sum;
-
 /**
- * @brief Breaks down the given number by summing up its digit(s).
+ * @brief This function evaluates the results in the known expression of
+ * e^(n * log(x)), which is identical to x^n. However, e^m (m: any number) is
+ * O(1) in time complexity, and so does the log(m) function. Therefore, the
+ * entire expression is O(1).
  *
- * @param num The number
- * @return Broken down to one-decimal place
+ * @param x The base
+ * @param n The power
+ * @return double x^n
  */
-void breakdown(int num)
+double power(const int x, const int n)
 {
-    sum = 0;
-    int temp = num;
-
-    while (temp > 0) {
-        sum += temp % 10;
-        temp /= 10;
-    }
-
-    if (sum < 10) {
-        printf("The answer is %d.\n", sum);
-        return;
-    }
-
-    breakdown(sum);
+    double res = exp(n * log(x));
+    return round(res);
 }
 
 int main(void)
 {
-    int num = 0;
+    int base = 0;
+    int n = 0;
 
-    printf("Enter a number: ");
+    printf("Input the base and the power (sep. by a space): ");
 
-    while (scanf("%d", &num) != 1) {
+    while (scanf("%d %d", &base, &n) != 2) {
         perror("error: Invalid input.\n");
         clear_stdin();
     }
 
-    if (num < 0) {
-        perror("error: Please enter positive integers only.\n");
-        return EXIT_FAILURE;
-    }
-
-    breakdown(num);
+    printf("The result is %.2lf.\n", power(base, n));
 
     return EXIT_SUCCESS;
 }
