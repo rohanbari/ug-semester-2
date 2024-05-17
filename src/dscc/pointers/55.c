@@ -1,0 +1,90 @@
+/*
+ Copyright 2024 Rohan Bari <rohanbari@outlook.com>
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+
+/**
+ * @file 55.c
+ * @author rohanbari <rohanbari@outlook.com>
+ * @brief This program uses pointers to simulate a 2-D array.
+ * @version 0.1
+ * @date 17-05-2024
+ *
+ * Copyright (c) 2024 Rohan Bari
+ *
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "../common.h"
+
+typedef struct {
+    int rows;
+    int cols;
+
+    int** data;
+} Array;
+
+void validate_ptr(const void* ptr)
+{
+    if (ptr == NULL) {
+        perror("error: malloc() failed.\n");
+        exit(EXIT_FAILURE);
+    }
+}
+
+int main(void)
+{
+    Array array = { 0, 0, NULL };
+
+    printf("Input the number of rows and columns: ");
+
+    while (scanf("%d %d", &array.rows, &array.cols) != 2) {
+        perror("error: Invalid input.\n");
+        clear_stdin();
+    }
+
+    if (array.rows <= 0 || array.cols <= 0) {
+        perror("error: The input must not be negative.\n");
+        return EXIT_FAILURE;
+    }
+
+    array.data = malloc(sizeof(int*) * array.rows);
+    validate_ptr(array.data);
+
+    for (int i = 0; i < array.rows; i++) {
+        array.data[i] = malloc(sizeof(int) * array.cols);
+        validate_ptr(array.data[i]);
+    }
+
+    printf("Input values in %dx%d order:\n", array.rows, array.cols);
+    for (int i = 0; i < array.rows; i++) {
+        for (int j = 0; j < array.cols; j++) {
+            while (scanf("%d", &array.data[i][j]) != 1) {
+                perror("error: Invalid input.\n");
+                clear_stdin();
+            }
+        }
+    }
+
+    printf("Value\tAddress\n");
+    for (int i = 0; i < array.rows; i++) {
+        for (int j = 0; j < array.cols; j++) {
+            printf("%d\t%p\n", array.data[i][j], (void*)&array.data[i][j]);
+        }
+    }
+
+    return EXIT_SUCCESS;
+}
