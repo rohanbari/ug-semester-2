@@ -15,24 +15,54 @@
  */
 
 /**
- * @file 45-inc.c
+ * @file 52.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief This program takes an input from the user, then generates the possible
- * combinations with each digit present in the number, and displays on the
- * screen.
+ * @brief This program takes two numeric input from the user, swaps them, and
+ * displays the final result.
  * @version 0.1
- * @date 14-05-2024
+ * @date 17-05-2024
  *
  * Copyright (c) 2024 Rohan Bari
  *
  */
 
+#include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "../common.h"
 
+#define MAX_LEN 256
+
+void swap(char* num1, char* num2)
+{
+    char temp[MAX_LEN];
+
+    strcpy(temp, num1);
+    strcpy(num1, num2);
+    strcpy(num2, temp);
+}
+
 int main(void)
 {
-    printf("Hello, world.\n");
+    char num1[MAX_LEN];
+    char num2[MAX_LEN];
+
+    printf("Input two numbers (sep. by space): ");
+
+    while (scanf("%255s %255s", num1, num2) != 2) {
+        perror("error: Invalid input.\n");
+        clear_stdin();
+    }
+
+    if (!isdigit(num1) || !isdigit(num2)) {
+        perror("error: The input must be a number.\n");
+        return EXIT_FAILURE;
+    }
+
+    swap(num1, num2);
+
+    printf("Swapped values: %s %s\n", num1, num2);
+
     return EXIT_SUCCESS;
 }

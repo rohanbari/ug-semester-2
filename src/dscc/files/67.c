@@ -17,7 +17,7 @@
 /**
  * @file 67.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief
+ * @brief This program demonstrates the usage of I/O of files.
  * @version 0.1
  * @date 23-05-2024
  *
