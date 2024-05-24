@@ -41,6 +41,11 @@ int main(void)
         clear_stdin();
     }
 
+    if (terms <= 0) {
+        perror("error: Number of terms should be > 0.\n");
+        return EXIT_FAILURE;
+    }
+
     int a = 0;
     int b = 1;
     int c = 1;

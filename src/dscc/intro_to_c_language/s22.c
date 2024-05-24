@@ -46,14 +46,14 @@ int main(void)
         clear_stdin();
     }
 
-    size_t input_size = strlen(input);
+    size_t input_size = strlen(input) - 1;
 
     // Omitting the new-line character before the end of actual null-terminator
     input[strcspn(input, "\n")] = 0;
 
-    for (int i = input_size - 1; i >= 0; i--) {
+    for (int i = input_size; i >= 0; i--) {
         // Basically out[0], out[1], ...
-        int j = input_size - i - 2;
+        int j = input_size - i - 1;
         out[j] = input[i];
 
         // Running specific checks

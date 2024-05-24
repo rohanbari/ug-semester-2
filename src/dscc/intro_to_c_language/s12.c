@@ -41,7 +41,12 @@ int main(void)
         clear_stdin();
     }
 
-    int sum = n * (n + 1) / 2;
+    int sum = 0;
+    if (n > 0)
+        sum = n * (n + 1) / 2;
+    else
+        sum = n * (1 - n) / 2;
+
     printf("Summation up to %d: %d\n", n, sum);
 
     return EXIT_SUCCESS;

@@ -40,6 +40,11 @@ int main(void)
         clear_stdin();
     }
 
+    if (n < 0) {
+        perror("error: The input must be a positive integer.\n");
+        return EXIT_FAILURE;
+    }
+
     printf("Odd numbers:  ");
     for (int i = 1; i <= n; i += 2)
         printf("%4d ", i);

@@ -43,6 +43,11 @@ int main(void)
         clear_stdin();
     }
 
+    if (length < 0 || breadth < 0) {
+        perror("error: Length and breadth cannot be less than zero.\n");
+        return EXIT_FAILURE;
+    }
+
     double perimeter = 2 * (length + breadth);
     double area = length * breadth;
 

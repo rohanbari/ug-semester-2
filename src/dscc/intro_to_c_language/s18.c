@@ -57,8 +57,8 @@ int main(void)
     }
 
     // Edge case: When the denominator could be zero
-    if (n == 0) {
-        printf("error: The value should not be zero.\n");
+    if (n <= 0) {
+        printf("error: The value should not be <= 0.\n");
         return EXIT_FAILURE;
     }
 

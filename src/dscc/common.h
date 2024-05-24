@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef __BOOL_H__
-#define __BOOL_H__
+#ifndef __COMMON_H__
+#define __COMMON_H__
 
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1

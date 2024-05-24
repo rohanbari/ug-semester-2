@@ -41,6 +41,11 @@ int main(void)
         clear_stdin();
     }
 
+    if (num <= 0) {
+        perror("error: The number should be > 1.\n");
+        return EXIT_FAILURE;
+    }
+
     for (int i = 1; i <= num; i++) {
         for (int j = 1; j <= i; j++) {
             printf("%3d", j);

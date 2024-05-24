@@ -71,7 +71,7 @@ int main(void)
         }
 
         if (input == C_FAHRENHEIT) {
-            double fahr = 9 * value / 5.0 - 32;
+            double fahr = 1.8 * value - 32;
             printf("The conversion result is %.2lf degrees F.\n", fahr);
         } else if (input == C_CELSIUS) {
             double celsius = 5 * (value - 32) / 9;

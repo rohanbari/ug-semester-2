@@ -66,6 +66,11 @@ int main(void)
         clear_stdin();
     }
 
+    if (n < 0) {
+        perror("error: The limit should be > 0.\n");
+        return EXIT_FAILURE;
+    }
+
     display_prime_numbers(n);
 
     return EXIT_SUCCESS;
