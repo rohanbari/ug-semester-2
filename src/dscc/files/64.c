@@ -43,13 +43,15 @@ int main(void)
 
     fprintf(fp, "Hello, world! What's up?\n");
 
-    fclose(fp);
-    fp = fopen(FILE_NAME, "r");
+    // Setting the cursor position to the start.
+    rewind(fp);
 
     int c = 0;
     while ((c = fgetc(fp)) != EOF) {
         fputc(c, stdout);
     }
+
+    fclose(fp);
 
     return EXIT_SUCCESS;
 }

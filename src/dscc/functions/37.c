@@ -60,6 +60,9 @@ int factorial_sum(const int val)
 
 int main(void)
 {
+    if (LOWER < 0 || UPPER < 0 || UPPER < LOWER)
+        return EXIT_FAILURE;
+
     for (int i = LOWER; i <= UPPER; i++) {
         int sum = factorial_sum(i);
         if (sum == i) {

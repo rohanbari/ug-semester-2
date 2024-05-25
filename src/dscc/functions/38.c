@@ -54,11 +54,16 @@ int main(void)
     int base = 0;
     int n = 0;
 
-    printf("Input the base and the power (sep. by a space): ");
+    printf("Input the base and the power (int, sep. by a space): ");
 
     while (scanf("%d %d", &base, &n) != 2) {
         perror("error: Invalid input.\n");
         clear_stdin();
+    }
+
+    if (base < 1) {
+        printf("The base cannot be negative.\n");
+        return EXIT_FAILURE;
     }
 
     printf("The result is %.2lf.\n", power(base, n));

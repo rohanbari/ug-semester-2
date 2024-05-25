@@ -99,5 +99,7 @@ int main(void)
         }
     }
 
+    free(students);
+
     return EXIT_SUCCESS;
 }

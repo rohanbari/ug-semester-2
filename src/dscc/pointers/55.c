@@ -86,5 +86,7 @@ int main(void)
         }
     }
 
+    free(array.data);
+
     return EXIT_SUCCESS;
 }

@@ -67,5 +67,7 @@ int main(void)
     }
     putc('\n', stdout);
 
+    free(array);
+
     return EXIT_SUCCESS;
 }

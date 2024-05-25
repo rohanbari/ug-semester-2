@@ -171,5 +171,9 @@ int main(void)
     Matrix C = multiply(A, B);
     display_matrix(C);
 
+    free(A.data);
+    free(B.data);
+    free(C.data);
+
     return EXIT_SUCCESS;
 }

@@ -89,5 +89,7 @@ int main(void)
 
     printf("The GCD of these is %d.\n", total_gcd);
 
+    free(array);
+
     return EXIT_SUCCESS;
 }
