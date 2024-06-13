@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rohan B. | Portfolio</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                color: #333;
+            }
+
+            header {
+                background-color: #e25822;
+                color: white;
+                padding: 1rem 0;
+            }
+
+            header .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            nav ul li {
+                margin-left: 20px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #e25822;
+            }
+
+            .project {
+                margin-bottom: 1.5rem;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 1rem 0;
+                margin-top: 2rem;
+            }
+
+            form label {
+                display: block;
+                margin-top: 1rem;
+            }
+
+            form input,
+            form textarea {
+                width: 100%;
+                padding: 0.5rem;
+                margin-top: 0.5rem;
+            }
+
+            form button {
+                background-color: #e25822;
+                color: white;
+                border: none;
+                padding: 1.0em 2.5em;
+                margin-top: 1rem;
+                cursor: pointer;
+            }
+
+            form button:hover {
+                background-color: #e25822;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>My Portfolio</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm a passionate application developer with experience
+                    in creating easy-to-use apps. I love coding and am always
+                    eager to learn new technologies.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Centaurus (2020-'22)</h3>
+                    <p>
+                        The most-efficient I.G.I.-2 multiplayer launcher
+                        application in VB.Net for Windows.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>ExOS (2019)</h3>
+                    <p>
+                        It contained all the troubleshooting one-click scripts
+                        in VB.Net for Windows.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>Work Education 2016, '17, '18</h3>
+                    <p>
+                        It contained everything I learned in programming basics.
+                        It was written in C.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming Languages: C, C++, Java, VB.Net, Python</li>
+                    <li>Web Languages: HTML, CSS, JavaScript</li>
+                    <li>Version Control: Git, GitLab, Bitbucket</li>
+                    <li>Server Side: MySQL, MongoDB</li>
+                    <li>Misc: Postman, FileZilla, Bash, PowerShell</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <form action="#" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Rohan Bari. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
