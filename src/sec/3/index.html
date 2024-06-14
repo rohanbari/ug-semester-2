@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SmartWatch Pro</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            header {
+                background-color: #333;
+                color: white;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            header h1 {
+                margin: 0;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 10px 0 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .hero {
+                background-image: url("back.jpg");
+                background-size: cover;
+                background-position: center;
+                color: white;
+                text-align: center;
+                padding: 100px 0;
+            }
+
+            .hero h2 {
+                margin: 0 0 20px;
+            }
+
+            .hero p {
+                margin: 0 0 20px;
+            }
+
+            .btn {
+                background-color: #e25822;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+
+            .features,
+            .specs,
+            .reviews,
+            .contact {
+                padding: 50px 0;
+                text-align: center;
+            }
+
+            .features .feature {
+                margin-bottom: 30px;
+            }
+
+            .features img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                nav ul {
+                    flex-direction: column;
+                }
+
+                nav ul li {
+                    margin: 10px 0;
+                }
+
+                .hero {
+                    padding: 50px 0;
+                }
+
+                .features .feature {
+                    margin-bottom: 20px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                header,
+                footer {
+                    padding: 20px 0;
+                }
+
+                .container {
+                    width: 95%;
+                }
+
+                .hero {
+                    padding: 30px 0;
+                }
+
+                .btn {
+                    padding: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>SmartWatch Pro</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#specs">Specifications</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h2>The Ultimate Smartwatch Experience</h2>
+                <p>
+                    Track your fitness, stay connected, and enjoy advanced
+                    features with SmartWatch Pro.
+                </p>
+                <a href="#buy" class="btn">Buy Now</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature">
+                    <img src="feature1.jpg" alt="Fitness Tracking" />
+                    <h3>Fitness Tracking</h3>
+                    <p>
+                        Monitor your health with our advanced fitness tracking
+                        capabilities.
+                    </p>
+                </div>
+                <div class="feature">
+                    <img src="feature2.jpg" alt="Connectivity" />
+                    <h3>Stay Connected</h3>
+                    <p>
+                        Receive notifications and stay connected with the world.
+                    </p>
+                </div>
+                <div class="feature">
+                    <img src="feature3.jpg" alt="Battery Life" />
+                    <h3>Long Battery Life</h3>
+                    <p>
+                        Enjoy up to 7 days of battery life on a single charge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="specs">
+            <div class="container">
+                <h2>Specifications</h2>
+                <ul style="list-style-type: none;">
+                    <li>Display: 1.5" OLED</li>
+                    <li>Battery: 300mAh</li>
+                    <li>Water Resistance: 50 meters</li>
+                    <li>Connectivity: 4G, Bluetooth 5.0, Wi-Fi</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2>Reviews</h2>
+                <div class="review">
+                    <p>
+                        "SmartWatch Pro has changed the way I track my fitness.
+                        Highly recommend!" - Jane D.
+                    </p>
+                </div>
+                <div class="review">
+                    <p>
+                        "The battery life is incredible. I only charge it once a
+                        week!" - John S.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>
+                    If you have any questions or need support, please
+                    <a href="mailto:support@smartwatchpro.com">email us</a>.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 SmartWatch Pro. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
