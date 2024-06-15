@@ -11,7 +11,7 @@ Please feel free to make any changes to my code.
 
 ## Coding Environment
 
-- **System.** Linux Mint 21.3 Virginia x64
+- **System.** Windows 10 Pro 22H2 x64
 - **IDE/Editor.** Visual Studio Code
 - **Compiler.** gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 
