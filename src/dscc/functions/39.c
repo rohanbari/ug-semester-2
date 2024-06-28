@@ -18,7 +18,7 @@
  * @file 39.c
  * @author rohanbari <rohanbari@outlook.com>
  * @brief This program takes several input from the user, evaluates the roots
- * of the expression [ax^2 + bx + c = 0].
+ * of the quadratic equation [ax^2 + bx + c = 0].
  *
  * @version 0.1
  * @date 11-05-2024

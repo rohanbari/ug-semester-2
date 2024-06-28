@@ -17,7 +17,8 @@
 /**
  * @file s21.c
  * @author rohanbari <rohanbari@outlook.com>
- * @brief
+ * @brief This program categorizes characters as alphabets, digits, punctuation,
+ * or special characters.
  * @version 0.1
  * @date 27-04-2024
  *
