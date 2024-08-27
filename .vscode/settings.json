@@ -4,5 +4,7 @@
         "stdio.h": "c",
         "common.h": "c",
         "type_traits": "c"
-    }
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true
 }
