@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /* ./a.out <source_file> <dest_file> */
-#define MAX_ARGS 2
+#define MAX_ARGS 3
 
 short validate_args(int argc, char* p)
 {
