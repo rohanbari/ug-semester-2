@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Penetration Testing Parallax Website</title>
+        <style>
+            /* Base styling */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+            }
+
+            h1,
+            h2 {
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                margin-bottom: 1em;
+            }
+
+            /* Parallax sections */
+            .parallax-section {
+                height: 100vh;
+                position: relative;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .header-section {
+                background-image: url("./res/img-1.jpg");
+            }
+
+            .simulate-section {
+                background-image: url("./res/img-2.jpg");
+            }
+
+            .footer-section {
+                background-image: url("./res/img-3.jpg");
+            }
+
+            /* Content inside parallax sections */
+            .content {
+                color: white;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 2em;
+                border-radius: 10px;
+            }
+
+            .content h1 {
+                font-size: 3em;
+            }
+
+            .content p {
+                font-size: 1.2em;
+            }
+
+            /* Text sections */
+            .text-section {
+                padding: 4em 2em;
+                text-align: center;
+                background-color: #f4f4f4;
+            }
+
+            .text-section h2 {
+                font-size: 2em;
+                color: #333;
+            }
+
+            .text-section p {
+                font-size: 1.1em;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Footer styling */
+            footer {
+                text-align: center;
+                padding: 2em;
+                background-color: #333;
+                color: white;
+            }
+
+            /* Responsive styling */
+            @media (max-width: 768px) {
+                .content h1 {
+                    font-size: 2em;
+                }
+
+                .content p {
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Section with a Parallax Effect -->
+        <section class="parallax-section header-section">
+            <div class="content">
+                <h1>Penetration Testing</h1>
+                <p>
+                    Discover the importance of ethical hacking and securing your
+                    systems
+                </p>
+            </div>
+        </section>
+
+        <!-- About Penetration Testing Section -->
+        <section class="text-section">
+            <h2>What is Penetration Testing?</h2>
+            <p>
+                Penetration testing, or ethical hacking, involves simulating
+                cyberattacks on a system to identify vulnerabilities before
+                malicious hackers can exploit them. It's a crucial process for
+                strengthening an organization’s security posture.
+            </p>
+        </section>
+
+        <!-- Second Parallax Section (Simulate Testing) -->
+        <section class="parallax-section simulate-section">
+            <div class="content">
+                <h2>Simulate Real-World Attacks</h2>
+                <p>
+                    Penetration testing allows security experts to simulate
+                    real-world attacks, identifying and fixing vulnerabilities
+                    before they can be exploited.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why is it Important Section -->
+        <section class="text-section">
+            <h2>Why is Penetration Testing Important?</h2>
+            <p>
+                Penetration testing is crucial for identifying security
+                weaknesses, ensuring compliance with industry regulations, and
+                preventing costly data breaches. Regular testing helps maintain
+                the integrity, confidentiality, and availability of sensitive
+                data.
+            </p>
+        </section>
+
+        <!-- Footer Parallax Section -->
+        <section class="parallax-section footer-section">
+            <div class="content">
+                <h2>Stay Secure, Stay Ahead</h2>
+                <p>
+                    The quieter you become, the more you are able to hear.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Penetration Testing Guide</p>
+        </footer>
+    </body>
+</html>
